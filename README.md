@@ -34,7 +34,7 @@
 - Desain UI/UX
 - Implementasi Antarmuka (Mengimplementasikan desain menggunakan HTML dan Tailwind CSS)
 ### Tim Backend (Gina)
-####Teknologi yang digunakan : 
+#### Teknologi yang digunakan : 
 - PHP (Laravel)
 - MySQL
 #### Tugas : 
