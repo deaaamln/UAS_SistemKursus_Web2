@@ -26,7 +26,21 @@
 
 ## Pembagian Tim
 ### Tim Frontend (Dea)
+#### Teknologi yang digunakan : 
+- HTML
+- Tailwind CSS
+- JavaScript
+#### Tugas : 
+- Desain UI/UX
+- Implementasi Antarmuka (Mengimplementasikan desain menggunakan HTML dan Tailwind CSS)
 ### Tim Backend (Gina)
+####Teknologi yang digunakan : 
+- PHP (Laravel)
+- MySQL
+#### Tugas : 
+- Desain dan Implementasi Database
+- Pengembangan Controller 
+- Logika bisnis dan Otentikasi
 
 ## Demo Proyek
 <ul>
