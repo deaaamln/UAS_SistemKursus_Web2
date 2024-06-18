@@ -25,8 +25,8 @@
 <p>Lorem ipsum sir dolor amet.</p>
 
 ## Pembagian Tim
-### Tim Frontend
-### Tim Backend
+#### Tim Frontend
+#### Tim Backend
 
 ## Demo Proyek
 <ul>
