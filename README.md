@@ -51,7 +51,7 @@ Sistem Kursus Online ini adalah platform yang dirancang untuk memudahkan Anda da
 - **Akses Mudah:** Tidak perlu kemampuan teknis khusus. Platform ini dirancang untuk semua orang yang ingin belajar, dari pemula hingga tingkat lanjutan.
 - **Dukungan Pelanggan:** Tim dukungan siap membantu jika Anda memiliki pertanyaan atau memerlukan bantuan teknis.
 
-### Teknologi di Balik Layar
+### Teknologi yang digunakan
 
 Platform ini menggunakan teknologi HTML, CSS (Tailwind CSS), JavaScript untuk membuat antarmuka pengguna yang responsif dan interaktif. Di sisi backend, kami menggunakan PHP (dengan framework Laravel) dan MySQL untuk menyimpan data pengguna dan informasi kursus dengan aman.
 
