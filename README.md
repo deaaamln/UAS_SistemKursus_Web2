@@ -45,16 +45,6 @@ Sistem Kursus Online ini adalah platform yang dirancang untuk memudahkan Anda da
    - Pantau kemajuan Anda dengan riwayat kursus yang tercatat.
    - Lihat kursus apa saja yang telah Anda ikuti dan selesaikan.
 
-### Kenapa Memilih Platform Ini?
-
-- **Desain Antarmuka yang Ramah Pengguna:** Desain platform ini didasarkan pada prinsip-prinsip modern untuk memastikan Anda merasa nyaman dan mudah berinteraksi.
-- **Akses Mudah:** Tidak perlu kemampuan teknis khusus. Platform ini dirancang untuk semua orang yang ingin belajar, dari pemula hingga tingkat lanjutan.
-- **Dukungan Pelanggan:** Tim dukungan siap membantu jika Anda memiliki pertanyaan atau memerlukan bantuan teknis.
-
-### Teknologi yang digunakan
-
-Platform ini menggunakan teknologi HTML, CSS (Tailwind CSS), JavaScript untuk membuat antarmuka pengguna yang responsif dan interaktif. Di sisi backend, kami menggunakan PHP (dengan framework Laravel) dan MySQL untuk menyimpan data pengguna dan informasi kursus dengan aman.
-
 ### Tampilan Antarmuka
 Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.figma.com/design/PclKNEZRiPL3zcJPz3UBjc/MyCourses.io---Course-Website-%7C-Course-Online-%7C-Course-details-%7C-Course-landing-page-%7C-Untitled-UI-(Community)?node-id=451-0&t=4Oj3Xy2y1QtqHc4Z-0). Desain ini menyediakan berbagai elemen UI yang modern dan user-friendly untuk memastikan pengalaman pengguna yang optimal.
 
