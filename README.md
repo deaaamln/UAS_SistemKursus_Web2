@@ -10,8 +10,8 @@
   <li>Proyek: Sistem Kursus</li>
   <li>Anggota:</li>
   <ul>
-    <li>Ketua: <a href="">Dea Meilani</a></li>
-    <li>Anggota 1: <a href="">Gina Deisri Fadila</a></li>
+    <li>Ketua: <a href="https://github.com/deaaamln">Dea Meilani</a></li>
+    <li>Anggota 1: <a href="https://github.com/Ginadf21">Gina Deisri Fadila</a></li>
   </ul>
 </ul>
 
