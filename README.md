@@ -56,7 +56,62 @@ Sistem Kursus Online ini adalah platform yang dirancang untuk memudahkan Anda da
 Platform ini menggunakan teknologi HTML, CSS (Tailwind CSS), JavaScript untuk membuat antarmuka pengguna yang responsif dan interaktif. Di sisi backend, kami menggunakan PHP (dengan framework Laravel) dan MySQL untuk menyimpan data pengguna dan informasi kursus dengan aman.
 
 ## Komponen Proyek
-<p>Lorem ipsum sir dolor amet.</p>
+1. **Pendaftaran Pengguna:**
+   - **Frontend:**
+     - Desain antarmuka pengguna untuk halaman pendaftaran menggunakan HTML dan Tailwind CSS.
+   - **Backend:**
+     - Implementasi tabel pengguna di database menggunakan MySQL.
+     - Pengembangan logika registrasi dan validasi data pendaftaran menggunakan PHP (Laravel).
+     - Implementasi controller untuk pendaftaran pengguna.
+
+2. **Login dan Otentikasi:**
+   - **Frontend:**
+     - Desain antarmuka pengguna untuk halaman login menggunakan HTML dan Tailwind CSS.
+   - **Backend:**
+     - Pengembangan logika otentikasi pengguna menggunakan PHP (Laravel).
+     - Implementasi fitur sesi pengguna untuk menjaga keamanan.
+     - Implementasi controller untuk login dan otentikasi pengguna.
+
+3. **Transaksi:**
+   - **Frontend:**
+     - Desain antarmuka untuk transaksi kursus menggunakan HTML dan Tailwind CSS.
+   - **Backend:**
+     - Pengembangan logika transaksi, termasuk proses pembelian kursus dan validasi pembayaran menggunakan PHP (Laravel).
+     - Implementasi controller untuk mengelola transaksi.
+
+4. **Riwayat Kursus:**
+   - **Frontend:**
+     - Desain antarmuka untuk menampilkan riwayat kursus yang telah diikuti oleh pengguna menggunakan HTML dan Tailwind CSS.
+   - **Backend:**
+     - Pengembangan logika untuk menampilkan data riwayat kursus dari database menggunakan PHP (Laravel).
+     - Implementasi controller untuk mengelola riwayat kursus.
+
+5. **Detail Kursus:**
+   - **Frontend:**
+     - Desain antarmuka detail kursus menggunakan HTML dan Tailwind CSS.
+   - **Backend:**
+     - Desain dan implementasi tabel kursus di database menggunakan MySQL.
+     - Pengembangan logika CRUD (Create, Read, Update, Delete) untuk mengelola data kursus menggunakan PHP (Laravel).
+     - Implementasi controller untuk mengelola detail kursus.
+
+6. **Verifikasi Pembelian Kursus:**
+   - **Frontend:**
+     - Implementasi antarmuka yang memastikan pengguna sudah login sebelum membeli kursus menggunakan HTML dan Tailwind CSS.
+   - **Backend:**
+     - Pengembangan logika untuk memverifikasi status login pengguna sebelum melakukan transaksi pembelian kursus menggunakan PHP (Laravel).
+     - Implementasi controller untuk memverifikasi pembelian kursus.
+
+7. **Fitur Admin:**
+   - **Frontend:**
+     - Desain dan implementasi antarmuka admin untuk mengelola berbagai aspek sistem menggunakan HTML dan Tailwind CSS.
+   - **Backend:**
+     - Pengembangan logika admin menggunakan PHP (Laravel) untuk:
+       - Mengelola peserta (menambah, mengubah, menghapus peserta).
+       - Mengelola pelajaran (menambah, mengubah, menghapus pelajaran).
+       - Mengelola jadwal kursus.
+       - Mengelola transaksi (melihat dan memvalidasi transaksi).
+       - Menampilkan riwayat kursus untuk pengguna.
+     - Implementasi controller untuk mengelola fitur-fitur admin.
 
 ## Pembagian Tim
 #### Teknologi yang Digunakan: 
@@ -128,6 +183,11 @@ Platform ini menggunakan teknologi HTML, CSS (Tailwind CSS), JavaScript untuk me
        - Mengelola transaksi (melihat dan memvalidasi transaksi).
        - Menampilkan riwayat kursus untuk pengguna.
      - Implementasi controller untuk mengelola fitur-fitur admin.
+
+## Status Pengerjaan
+Saat ini, fitur-fitur berikut telah diselesaikan:
+1. **Pendaftaran Pengguna:** Otentikasi dan registrasi pengguna berhasil diimplementasikan.
+2. **Detail Kursus:** Pengguna dapat melihat detail kursus yang tersedia, termasuk deskripsi, jadwal, dan informasi instruktur.
 
 ## Demo Proyek
 <ul>
