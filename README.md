@@ -55,6 +55,9 @@ Sistem Kursus Online ini adalah platform yang dirancang untuk memudahkan Anda da
 
 Platform ini menggunakan teknologi HTML, CSS (Tailwind CSS), JavaScript untuk membuat antarmuka pengguna yang responsif dan interaktif. Di sisi backend, kami menggunakan PHP (dengan framework Laravel) dan MySQL untuk menyimpan data pengguna dan informasi kursus dengan aman.
 
+### Tampilan Antarmuka
+Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.figma.com/design/PclKNEZRiPL3zcJPz3UBjc/MyCourses.io---Course-Website-%7C-Course-Online-%7C-Course-details-%7C-Course-landing-page-%7C-Untitled-UI-(Community)?node-id=451-0&t=4Oj3Xy2y1QtqHc4Z-0). Desain ini menyediakan berbagai elemen UI yang modern dan user-friendly untuk memastikan pengalaman pengguna yang optimal.
+
 ## Komponen Proyek
 1. **Pendaftaran Pengguna:**
    - **Frontend:**
