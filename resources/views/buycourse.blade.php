@@ -138,7 +138,7 @@
                             <p class="font-bold text-2xl">Rp. {{ $course->price }}</p>
                             <p class="bg-purple-600 px-3 py-1 text-white mt-2 w-24">20% OFF</p>
                             <div class="mt-5 flex flex-col gap-3">
-                                <a href="#">
+                                <a href="{{ route('transaction', $course->id) }}">
                                     <button
                                         class="text-center px-2 py-2 text-white bg-red-500 rounded-xl w-80 hover:bg-red-100 hover:text-white">
                                         Buy

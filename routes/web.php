@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/login', function () {
@@ -10,6 +10,9 @@ Route::get('/login', function () {
 })->name('login');
 
 Route::get('/', [CourseController::class, 'index'])->name('welcome.index');
+Route::get('/purchasing', function () {
+    return view('purchase');
+})->name('purchase');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'profile'])->name('profile.index');
@@ -17,6 +20,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/buyCourse/{id}', [CourseController::class, 'show'])->name('buy-course');
+    Route::get('/transaction/{id}', [TransactionController::class, 'show'])->name('transaction');
+    Route::post('/transaction', [TransactionController::class, 'store'])->name('transaction.store');
 });
 
 require __DIR__ . '/auth.php';
