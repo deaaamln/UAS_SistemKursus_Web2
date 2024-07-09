@@ -216,6 +216,56 @@
                         </a>
                     </div>
                 </div>
+                <div class="Trending">
+                    <div class="header">
+                        <p class="font-bold text-2xl">Trending Course</p>
+                        <p class="mt-2 text-gray-500">We know the best things for You. Top picks for You.</p>
+                    </div>
+                    <div class="wrap-card flex flex-wrap gap-3 mt-5">
+                        @foreach ($courses as $course)
+                            <a href="{{ auth()->check() ? route('buy-course', $course->id) : route('login') }}">
+                                <div class="max-w-xs w-full bg-white rounded-lg shadow-md">
+                                    <img class="w-full object-cover hover:opacity-75"
+                                        src="{{ asset('storage/' . $course->image) }}" alt="" />
+                                    <div class="p-4">
+                                        <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                                            {{ $course->title }}
+                                        </h5>
+                                        <div class="developer flex items-center gap-2 mb-2">
+                                            <img src="{{ asset('images/person_outline_24px.png') }}" alt="">
+                                            <p class="text-sm text-emerald-500">Course ID: {{ $course->id }}</p>
+                                        </div>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                            {{ Str::limit($course->description, 100) }}
+                                        </p>
+                                        @if ($course->schedules->isNotEmpty())
+                                            <div class="mt-3 mb-2">
+                                                <ul class="list-none">
+                                                    @foreach ($course->schedules as $schedule)
+                                                        <li class="flex items-center gap-3">
+                                                            <p
+                                                                class="px-1 py-1 bg-emerald-500 rounded-lg text-white w-24 text-xs font-bold text-center">
+                                                                {{ $schedule->start_date }}
+                                                            </p> -
+                                                            <p
+                                                                class="px-1 py-1 bg-red-500 rounded-lg text-white w-24 text-xs font-bold text-center">
+                                                                {{ $schedule->end_date }}
+                                                            </p>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        @endif
+                                        <button class="px-3 py-2 bg-emerald-400 text-white rounded-xl">
+                                            Register Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        @endforeach
+                    </div>
+                </div>
+
                 <div class="Rekomendasi mt-10">
                     <div class="header">
                         <p class="font-bold text-2xl">More From Us</p>
