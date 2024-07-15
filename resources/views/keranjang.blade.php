@@ -14,7 +14,6 @@
 
     <!-- Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </head>
 
 <body class="font-sans antialiase">
@@ -81,12 +80,12 @@
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                     aria-labelledby="dropdownUserAvatarButton">
                                     <li>
-                                        <a href="{{ route('profile.index') }}"
+                                        <a href="#"
                                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
                                     </li>
                                 </ul>
                                 <div class="py-2">
-                                    <form action="{{ route('logout') }}" method="POST">
+                                    <form action="{{ route('logout') }}">
                                         @csrf
                                         <Button
                                             class="w-full block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-black">Log
@@ -108,169 +107,76 @@
                 </div>
             </div>
         </nav>
-        <script>
-            @if (session('error'))
-                swal({
-                    title: "Error",
-                    text: "{{ session('error') }}",
-                    icon: "error",
-                    button: "OK",
-                });
-            @endif
-
-            @if (session('success'))
-                swal({
-                    title: "Success",
-                    text: "{{ session('success') }}",
-                    icon: "success",
-                    button: "OK",
-                });
-            @endif
-        </script>
         <div class="main flex justify-center bg-white">
             <div class="container mt-5" style="width: 80%">
-                <div class="main">
-                    <div class="header flex gap-10">
-                        <div class="thumbnail">
-                            <img src="{{ asset('storage/' . $course->image) }}" alt="thumbnail"
-                                class="w-full object-cover h-80">
+                <div class="Trending">
+                    <div class="header text-left">
+                        <p class="font-bold text-2xl">My Cart</p>
+                    </div>
+                    <div class="wrap-card mt-5">
+                        <div class="title w-full">
+                            <p class="mb-2 text-lg font-semibold">1 Course in chart</p>
                         </div>
-                        <div class="price mt-5">
-                            <p class="font-bold text-2xl">Rp. {{ $course->price }}</p>
-                            <p class="bg-purple-600 px-3 py-1 text-white mt-2 w-24">20% OFF</p>
-                            <div class="mt-5 flex flex-col gap-3">
-                                <a href="{{ route('transaction',  $course->id) }}">
-                                    <button
-                                        class="text-center px-2 py-2 text-white bg-red-500 rounded-xl w-80 hover:bg-red-100 hover:text-white">
-                                        Buy
-                                    </button>
-                                </a>
+                        <div class="flex gap-3">
+                            <div class="course mt-3">
+                                <hr>
+                                <div class="flex justify-between  gap-3 mt-3 mb-3">
+                                    <div class="thumbnail flex gap-3">
+                                        <img src="{{ asset('images/Card1.png') }}" alt=""
+                                            class="object-cover h-32">
+                                        <div class="desc">
+                                            <p class="title mb-2 text-lg font-semibold">Developer Bootcamp</p>
+                                            <p class="desc mb-2 text-xs font-normal">By MyCourse.io</p>
+                                            <p class="disk py-1 px-2 bg-purple-600 text-white w-14 "
+                                                style="font-size: 10px">20%
+                                                OFF</p>
+                                            <ul style="list-style: none" class="mt-2 flex items-center gap-2">
+                                                <li class="flex items-center gap-3"><img
+                                                        src="{{ asset('images/list_alt_24px.png') }}" alt="">
+                                                    <p class="font-semibold text-sm text-gray-600">22 Section</p>
+                                                </li>
+                                                <li class="flex items-center gap-3 mt-3 mb-3"><img
+                                                        src="{{ asset('images/chrome_reader_mode_24px.png') }}"
+                                                        alt="">
+                                                    <p class="font-semibold text-sm text-gray-600">152 Lecturers</p>
+                                                </li>
+                                                <li class="flex items-center gap-3"><img
+                                                        src="{{ asset('images/live_tv_24px.png') }}" alt="">
+                                                    <p class="font-semibold text-sm text-gray-600">21 Hours 33m total
+                                                        length
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <Button
+                                            class="px-2 py-2 bg-red-500 text-white text-sm rounded-lg mr-6 hover:bg-red-300">Remove
+                                            Course</Button>
+                                        <span class="font-bold text-md">Rp.129,0000</span>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="payment ml-14  w-72">
+                                <p class="text-xl font-bold text-gray-300 mb-2">Total : </p>
+                                <p class="text-2xl font-bold">RP.129,000</p>
+                                <p class="disk py-1 px-2 bg-purple-600 text-white w-14 " style="font-size: 10px">20%
+                                    OFF</p>
                                 <Button
-                                    class="text-center px-2 py-2 text-gray-500 border border-gray-400 bg-white rounded-xl w-80 flex items-center justify-center gap-3 hover:bg-emerald-400 hover:text-white"><svg
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                    </svg>
-                                    Keranjang</Button>
-                            </div>
-                            @if ($schedules->isNotEmpty())
-                                <div class="list mt-5">
-                                    <ul style="list-style: none">
-                                        @foreach ($schedules as $schedule)
-                                            <li class="flex items-center gap-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                    class="size-6">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                </svg>
+                                    class="mb-2 mt-2 px-2 py-2 text-center text-white bg-emerald-500 font-bold w-full hover:bg-emerald-200">Checkout</Button>
 
-                                                <p class="font-semibold text-sm text-gray-600">
-                                                    {{ \Carbon\Carbon::parse($schedule->start_date)->format('D, H:i') }}
-                                                    -
-                                                    {{ \Carbon\Carbon::parse($schedule->end_date)->format('D, H:i') }}
-                                                </p>
-                                            </li>
-                                            <li class="flex items-center gap-3 mt-3 mb-3"><img
-                                                    src="{{ asset('images/chrome_reader_mode_24px.png') }}"
-                                                    alt="">
-                                                <p class="font-semibold text-sm text-gray-600">152 Lecturers</p>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                <div class="warning mt-5">
-                                    <p class="font-semibold text-sm text-red-600">Buy This Course and Prepare for the
-                                        upcoming schedule!
-                                    </p>
-                                </div>
-                            @else
-                                <div class="list mt-5">
-                                    <ul style="list-style: none">
-                                        <li class="flex items-center gap-3"><img
-                                                src="{{ asset('images/list_alt_24px.png') }}" alt="">
-                                            <p class="font-semibold text-sm text-gray-600">22 Section</p>
-                                        </li>
-                                        <li class="flex items-center gap-3 mt-3 mb-3"><img
-                                                src="{{ asset('images/chrome_reader_mode_24px.png') }}"
-                                                alt="">
-                                            <p class="font-semibold text-sm text-gray-600">152 Lecturers</p>
-                                        </li>
-                                        <li class="flex items-center gap-3"><img
-                                                src="{{ asset('images/live_tv_24px.png') }}" alt="">
-                                            <p class="font-semibold text-sm text-gray-600">21 Hours 33m total length
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            @endif
-
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <div class="title mt-5">
-                            <p class="font-bold text-2xl">{{ $course->title }}</p>
-                        </div>
-                        <div class="channel mt-5">
-                            <div class="image">
-                                <img class="h-7" src="{{ asset('images/Logo.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="about mt-5">
-                            <p class="font-bold text-lg">About Course</p>
-                            <p class="title">
-                                {{ $course->description }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="review mt-5">
-                        <p class="mt-4 mb-5 font-bold">Review </p>
-                        <div class="flex gap-3 mb-3">
-                            <img src="{{ asset('images/Square-1.png') }}" alt="" class="h-7">
-                            <div class="text">
-                                <p class="text-sm font-bold text-emerald-400">Leona Heart</p>
-                                <p class="text-sm font-normal text-gray-300 mt-3">Loved This Course, I'Ve Learned
-                                    some technique</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-3 mb-3">
-                            <img src="{{ asset('images/Square-2.png') }}" alt="" class="h-7">
-                            <div class="text">
-                                <p class="text-sm font-bold text-emerald-400">Jimmy Hampton</p>
-                                <p class="text-sm font-normal text-gray-300 mt-3">Very Good Course, I'Ve Learned
-                                    some technique</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-3 mb-3">
-                            <img src="{{ asset('images/Square.png') }}" alt="" class="h-7">
-                            <div class="text">
-                                <p class="text-sm font-bold text-emerald-400">Tom Edison</p>
-                                <p class="text-sm font-normal text-gray-300 mt-3">I'Ve Learned some technique about
-                                    Programming</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="footer">
                     <footer class="bg-white">
-                        <div class="container px-6 py-12 mx-auto">
+                        <div class="container  py-12 mx-auto">
                             <div class="md:flex md:-mx-3 md:items-center md:justify-between">
                                 <h1 class="text-xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-2xl">
                                     Subscribe our newsletter to get update.</h1>
 
-                                <div class="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
-                                    <a href="#"
-                                        class="inline-flex items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg gap-x-3 hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
-                                        <span>Sign Up Now</span>
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                                        </svg>
-                                    </a>
-                                </div>
                             </div>
 
                             <hr class="my-6 border-gray-200 md:my-10">

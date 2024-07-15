@@ -49,7 +49,7 @@
                     <div class="flex justify-center md:block">
                         @auth
                             <a class="relative text-gray-700 transition-colors duration-300 transform "
-                                href="#">
+                                href="{{ route('courses.index') }}">
                                 <Button class="px-2 py-2 bg-gray-100 rounded-md"> <svg xmlns="http://www.w3.org/2000/svg"
                                         fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                         class="size-6">
@@ -122,11 +122,11 @@
                     <div
                         class="text-left flex items-center justify-between mt-[1rem] border-b border-gray-400 pb-[0.5rem]">
                         <p class="font-normal text-sm">Subtotal :</p>
-                        <p class="font-normal text-sm"> Rp. {{ $course->price }}</p>
+                        <p class="font-normal text-sm"> {{ $course->price }}</p>
                     </div>
                     <div class="text-left flex items-center justify-between mt-[1rem] pb-[0.5rem]">
                         <p class="font-normal text-sm">Total :</p>
-                        <p class="font-normal text-sm">Rp. {{ $course->price }}</p>
+                        <p class="font-normal text-sm"> {{ $course->price }}</p>
                     </div>
                     <form action="{{ route('transaction.store', $course->id) }}" method="POST"
                         enctype="multipart/form-data">

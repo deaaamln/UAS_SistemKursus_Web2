@@ -22,13 +22,24 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function store(LoginRequest $request)
     {
-        $request->authenticate();
 
-        $request->session()->regenerate();
+        try {
+            $request->authenticate();
+            $request->session()->regenerate();
+            if (Auth::user() && Auth::user()->role != 'user') {
+                return redirect()->route('dashboard-admin');
+            } else if (Auth::user() && Auth::user()->role = 'user') {
+                return redirect()->route('welcome.index');
+            } else {
+                Auth::guard('web')->logout();
+                return redirect()->route('login')->with('status', 'You are not authorized to access this page.');
+            }
+        } catch (\Exception $e) {
+            return redirect()->route('login')->with('error', 'ini error' . $e->getMessage());
+        }
 
-        return redirect()->intended(route('welcome.index', absolute: false));
     }
 
     /**

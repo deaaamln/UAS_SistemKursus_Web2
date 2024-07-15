@@ -15,7 +15,10 @@ class Course extends Model
         'price'
     ];
 
-
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 
     protected static function boot()
     {

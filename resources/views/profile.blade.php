@@ -14,7 +14,6 @@
 
     <!-- Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </head>
 
 <body class="font-sans antialiase">
@@ -108,155 +107,41 @@
                 </div>
             </div>
         </nav>
-        <script>
-            @if (session('error'))
-                swal({
-                    title: "Error",
-                    text: "{{ session('error') }}",
-                    icon: "error",
-                    button: "OK",
-                });
-            @endif
 
-            @if (session('success'))
-                swal({
-                    title: "Success",
-                    text: "{{ session('success') }}",
-                    icon: "success",
-                    button: "OK",
-                });
-            @endif
-        </script>
         <div class="main flex justify-center bg-white">
             <div class="container mt-5" style="width: 80%">
-                <div class="main">
-                    <div class="header flex gap-10">
-                        <div class="thumbnail">
-                            <img src="{{ asset('storage/' . $course->image) }}" alt="thumbnail"
-                                class="w-full object-cover h-80">
-                        </div>
-                        <div class="price mt-5">
-                            <p class="font-bold text-2xl">Rp. {{ $course->price }}</p>
-                            <p class="bg-purple-600 px-3 py-1 text-white mt-2 w-24">20% OFF</p>
-                            <div class="mt-5 flex flex-col gap-3">
-                                <a href="{{ route('transaction',  $course->id) }}">
-                                    <button
-                                        class="text-center px-2 py-2 text-white bg-red-500 rounded-xl w-80 hover:bg-red-100 hover:text-white">
-                                        Buy
-                                    </button>
-                                </a>
-                                <Button
-                                    class="text-center px-2 py-2 text-gray-500 border border-gray-400 bg-white rounded-xl w-80 flex items-center justify-center gap-3 hover:bg-emerald-400 hover:text-white"><svg
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                    </svg>
-                                    Keranjang</Button>
-                            </div>
-                            @if ($schedules->isNotEmpty())
-                                <div class="list mt-5">
-                                    <ul style="list-style: none">
-                                        @foreach ($schedules as $schedule)
-                                            <li class="flex items-center gap-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                    class="size-6">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                                </svg>
-
-                                                <p class="font-semibold text-sm text-gray-600">
-                                                    {{ \Carbon\Carbon::parse($schedule->start_date)->format('D, H:i') }}
-                                                    -
-                                                    {{ \Carbon\Carbon::parse($schedule->end_date)->format('D, H:i') }}
-                                                </p>
-                                            </li>
-                                            <li class="flex items-center gap-3 mt-3 mb-3"><img
-                                                    src="{{ asset('images/chrome_reader_mode_24px.png') }}"
-                                                    alt="">
-                                                <p class="font-semibold text-sm text-gray-600">152 Lecturers</p>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                <div class="warning mt-5">
-                                    <p class="font-semibold text-sm text-red-600">Buy This Course and Prepare for the
-                                        upcoming schedule!
-                                    </p>
-                                </div>
-                            @else
-                                <div class="list mt-5">
-                                    <ul style="list-style: none">
-                                        <li class="flex items-center gap-3"><img
-                                                src="{{ asset('images/list_alt_24px.png') }}" alt="">
-                                            <p class="font-semibold text-sm text-gray-600">22 Section</p>
-                                        </li>
-                                        <li class="flex items-center gap-3 mt-3 mb-3"><img
-                                                src="{{ asset('images/chrome_reader_mode_24px.png') }}"
-                                                alt="">
-                                            <p class="font-semibold text-sm text-gray-600">152 Lecturers</p>
-                                        </li>
-                                        <li class="flex items-center gap-3"><img
-                                                src="{{ asset('images/live_tv_24px.png') }}" alt="">
-                                            <p class="font-semibold text-sm text-gray-600">21 Hours 33m total length
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            @endif
-
-                        </div>
+                <div class="profile mb-48">
+                    <div class="header text-center">
+                        <p class="font-bold text-2xl">My Profile</p>
+                        <p class="mt-2 text-gray-500">information about people</p>
                     </div>
-                    <div class="detail">
-                        <div class="title mt-5">
-                            <p class="font-bold text-2xl">{{ $course->title }}</p>
-                        </div>
-                        <div class="channel mt-5">
-                            <div class="image">
-                                <img class="h-7" src="{{ asset('images/Logo.png') }}" alt="">
-                            </div>
-                        </div>
-                        <div class="about mt-5">
-                            <p class="font-bold text-lg">About Course</p>
-                            <p class="title">
-                                {{ $course->description }}
-                            </p>
-                        </div>
+                    <div class="flex justify-center mb-4">
+                        <img src="{{ asset('images/profile.png') }}" alt="" class="w-20 h-20 rounded-full ">
                     </div>
-                    <div class="review mt-5">
-                        <p class="mt-4 mb-5 font-bold">Review </p>
-                        <div class="flex gap-3 mb-3">
-                            <img src="{{ asset('images/Square-1.png') }}" alt="" class="h-7">
-                            <div class="text">
-                                <p class="text-sm font-bold text-emerald-400">Leona Heart</p>
-                                <p class="text-sm font-normal text-gray-300 mt-3">Loved This Course, I'Ve Learned
-                                    some technique</p>
-                            </div>
+                    <form class="max-w-md mx-auto">
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input type="email" name="floating_email" id="floating_email"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder=" " value={{ $user->name }} required />
+                            <label for="floating_email"
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Username
+                            </label>
                         </div>
-                        <div class="flex gap-3 mb-3">
-                            <img src="{{ asset('images/Square-2.png') }}" alt="" class="h-7">
-                            <div class="text">
-                                <p class="text-sm font-bold text-emerald-400">Jimmy Hampton</p>
-                                <p class="text-sm font-normal text-gray-300 mt-3">Very Good Course, I'Ve Learned
-                                    some technique</p>
-                            </div>
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input type="text" name="floating_password" id="floating_password"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                placeholder="" value={{ $user->email }} required />
+                            <label for="floating_password"
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
                         </div>
-                        <div class="flex gap-3 mb-3">
-                            <img src="{{ asset('images/Square.png') }}" alt="" class="h-7">
-                            <div class="text">
-                                <p class="text-sm font-bold text-emerald-400">Tom Edison</p>
-                                <p class="text-sm font-normal text-gray-300 mt-3">I'Ve Learned some technique about
-                                    Programming</p>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="footer">
-                    <footer class="bg-white">
+                    <footer class="bg-white dark:bg-gray-900">
                         <div class="container px-6 py-12 mx-auto">
                             <div class="md:flex md:-mx-3 md:items-center md:justify-between">
-                                <h1 class="text-xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-2xl">
+                                <h1
+                                    class="text-xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-2xl dark:text-white">
                                     Subscribe our newsletter to get update.</h1>
 
                                 <div class="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
@@ -273,75 +158,75 @@
                                 </div>
                             </div>
 
-                            <hr class="my-6 border-gray-200 md:my-10">
+                            <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700">
 
                             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                                 <div>
-                                    <p class="font-semibold text-gray-800">Quick Link</p>
+                                    <p class="font-semibold text-gray-800 dark:text-white">Quick Link</p>
 
                                     <div class="flex flex-col items-start mt-5 space-y-2">
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Instagram</a>
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Instagram</a>
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Facebook</a>
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Facebook</a>
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Our
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Our
                                             LinkedIn</a>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <p class="font-semibold text-gray-800">Popular Course</p>
+                                    <p class="font-semibold text-gray-800 dark:text-white">Popular Course</p>
 
                                     <div class="flex flex-col items-start mt-5 space-y-2">
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Clone
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Clone
                                             & E-Commerce</a>
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">UI
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">UI
                                             Design</a>
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Web
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Web
                                             Programming</a>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <p class="font-semibold text-gray-800">Services</p>
+                                    <p class="font-semibold text-gray-800 dark:text-white">Services</p>
 
                                     <div class="flex flex-col items-start mt-5 space-y-2">
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Translation</a>
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Translation</a>
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Proofreading
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Proofreading
                                             & Editing</a>
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Content
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Content
                                             Creation</a>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <p class="font-semibold text-gray-800">Contact Us</p>
+                                    <p class="font-semibold text-gray-800 dark:text-white">Contact Us</p>
 
                                     <div class="flex flex-col items-start mt-5 space-y-2">
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">+880
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">+880
                                             768 473 4978</a>
                                         <a href="#"
-                                            class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">info@myscourse.com</a>
+                                            class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">info@myscourse.com</a>
                                     </div>
                                 </div>
                             </div>
 
-                            <hr class="my-6 border-gray-200 md:my-10">
+                            <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700">
 
                             <div class="flex flex-col items-center justify-between sm:flex-row">
                                 <a href="#">
                                     <img class="w-auto h-7" src="{{ asset('images/Logo.png') }}" alt="">
                                 </a>
 
-                                <p class="mt-4 text-sm text-gray-500 sm:mt-0">© Copyright 2021. All
+                                <p class="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">© Copyright 2021. All
                                     Rights Reserved.</p>
                             </div>
                         </div>

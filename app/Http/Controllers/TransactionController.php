@@ -43,14 +43,7 @@ class TransactionController extends Controller
                 return redirect()->back()->with('error', 'You have already purchased this course.');
             }
 
-            // Custom validation messages
-            $messages = [
-                'image.required' => 'Tolong upload bukti pembayaran',
-                'image.image' => 'Harus berupa photo',
-                'image.mimes' => 'Extensi photo harus  jpeg, png, jpg, gif.',
-            ];
-
-            // Validate the incoming request data with custom messages
+            // Validate the incoming request data
             $validatedData = $request->validate([
                 'user_id' => 'required|exists:users,id',
                 'course_id' => 'required|exists:courses,id',
@@ -58,7 +51,7 @@ class TransactionController extends Controller
                 'transaction_date' => 'required|date',
                 'status' => 'required|in:completed,incomplete',
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate image file
-            ], $messages);
+            ]);
 
             // Handle the image upload
             if ($request->hasFile('image')) {
@@ -74,6 +67,5 @@ class TransactionController extends Controller
         } catch (\Exception $th) {
             return redirect()->back()->with('error', $th->getMessage());
         }
-
     }
 }

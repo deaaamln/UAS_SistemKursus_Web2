@@ -48,7 +48,8 @@
                     class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white  md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
                     <div class="flex justify-center md:block">
                         @auth
-                            <a class="relative text-gray-700 transition-colors duration-300 transform " href="">
+                            <a class="relative text-gray-700 transition-colors duration-300 transform "
+                                href="{{ route('courses.index') }}">
                                 <Button class="px-2 py-2 bg-gray-100 rounded-md"> <svg xmlns="http://www.w3.org/2000/svg"
                                         fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                         class="size-6">
@@ -79,7 +80,7 @@
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                     aria-labelledby="dropdownUserAvatarButton">
                                     <li>
-                                        <a href=""
+                                        <a href="{{ route('profile.index') }}"
                                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
                                     </li>
                                 </ul>
@@ -265,7 +266,6 @@
                         @endforeach
                     </div>
                 </div>
-
                 <div class="Rekomendasi mt-10">
                     <div class="header">
                         <p class="font-bold text-2xl">More From Us</p>
