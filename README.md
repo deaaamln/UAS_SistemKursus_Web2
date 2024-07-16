@@ -181,5 +181,5 @@ Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.f
 ## Demo Proyek
 <ul>
   <li>Github: <a href="">Github</a></li>
-  <li>Youtube: <a href="">Youtube</a></li>
+  <li>Youtube: <a href="https://youtu.be/kAoI5SIi1kU">Youtube</a></li>
 </ul>
