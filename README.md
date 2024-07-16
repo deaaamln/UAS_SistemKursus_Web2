@@ -16,11 +16,18 @@
 </ul>
 
 ## Sistem Kursus 
-<p>Lorem ipsum sir dolor amet.</p>
+Dashboard ini menampilkan kursus-kursus tren dan rekomendasi untuk pengguna. Bagian utama menyoroti kursus populer dengan detail singkat dan tombol pendaftaran, sementara bagian bawah menampilkan berbagai kategori kursus lain. Desainnya sederhana, memudahkan pengguna menemukan dan mendaftar kursus.
+### Beranda atau Dashboard
+<div align="center">
+    <img src="public/images/dashboard2.png">
+</div>
+
+<div align="center">
+    <img src="public/images/dashboard.png">
+</div>
 
 ## Penjelasan Proyek
 ### Apa itu Sistem Kursus Online?
-
 Sistem Kursus Online ini adalah platform yang dirancang untuk memudahkan Anda dalam mempelajari keterampilan baru secara online. Apakah Anda ingin belajar desain grafis dengan Adobe Illustrator dan Adobe Photoshop, mendesain antarmuka pengguna (UI Design), atau bahkan memulai perjalanan dalam pemrograman web dan mobile, platform ini menyediakan berbagai kursus yang sesuai dengan kebutuhan Anda.
 
 ### Fitur Utama Platform
