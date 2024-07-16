@@ -148,13 +148,7 @@ Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.f
      - Pengembangan logika transaksi, termasuk proses pembelian kursus dan validasi pembayaran menggunakan PHP (Laravel).
      - Implementasi controller untuk mengelola transaksi.
 
-4. **Riwayat Kursus:**
-   - **Frontend:** 
-     - Desain antarmuka untuk menampilkan riwayat kursus yang telah diikuti oleh pengguna menggunakan HTML dan Tailwind CSS.
-   - **Backend:** 
-     - Pengembangan logika untuk menampilkan data riwayat kursus dari database menggunakan PHP (Laravel).
-     - Implementasi controller untuk mengelola riwayat kursus.
-
+4. 
 ### Gina - Frontend dan Backend:
 
 1. **Detail Kursus:**
@@ -165,12 +159,12 @@ Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.f
      - Pengembangan logika CRUD (Create, Read, Update, Delete) untuk mengelola data kursus menggunakan PHP (Laravel).
      - Implementasi controller untuk mengelola detail kursus.
 
-2. **Verifikasi Pembelian Kursus:**
+2. **Riwayat Kursus:**
    - **Frontend:** 
-     - Implementasi antarmuka yang memastikan pengguna sudah login sebelum membeli kursus menggunakan HTML dan Tailwind CSS.
+     - Desain antarmuka untuk menampilkan riwayat kursus yang telah diikuti oleh pengguna menggunakan HTML dan Tailwind CSS.
    - **Backend:** 
-     - Pengembangan logika untuk memverifikasi status login pengguna sebelum melakukan transaksi pembelian kursus menggunakan PHP (Laravel).
-     - Implementasi controller untuk memverifikasi pembelian kursus.
+     - Pengembangan logika untuk menampilkan data riwayat kursus dari database menggunakan PHP (Laravel).
+     - Implementasi controller untuk mengelola riwayat kursus.
 
 3. **Fitur Admin:**
    - **Frontend:** 
