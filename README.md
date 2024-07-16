@@ -178,11 +178,6 @@ Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.f
        - Menampilkan riwayat kursus untuk pengguna.
      - Implementasi controller untuk mengelola fitur-fitur admin.
 
-### Status Pengerjaan
-Saat ini, fitur-fitur berikut telah diselesaikan:
-1. **Pendaftaran Pengguna:** Otentikasi dan registrasi pengguna berhasil diimplementasikan.
-2. **Detail Kursus:** Pengguna dapat melihat detail kursus yang tersedia, termasuk deskripsi, jadwal, dan informasi instruktur.
-
 ## Demo Proyek
 <ul>
   <li>Github: <a href="">Github</a></li>
