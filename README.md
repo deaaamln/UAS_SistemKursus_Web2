@@ -148,7 +148,6 @@ Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.f
      - Pengembangan logika transaksi, termasuk proses pembelian kursus dan validasi pembayaran menggunakan PHP (Laravel).
      - Implementasi controller untuk mengelola transaksi.
 
-4. 
 ### Gina - Frontend dan Backend:
 
 1. **Detail Kursus:**
@@ -189,9 +188,13 @@ Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.f
 <div align="center">
     <img src="public/images/1.png">
 </div>
+
 ### Beranda atau Dashboard
+
 Ini merupakan tampilan untuk menampilkan course yang di buat oleh admin, yang dimana ketika menekan tag a maka dan apabila sudah login maka akan di arahkan ke memberli course, namun jika belum akan di arahkan ke halaman login untuk login terlebih dahulu.
+
 ### Halaman login dan Register
+
 Untuk Authentication Login dan Register menggunakan fitur atau package dari laravel sendiri yaitu laravel breeze yang otomatis sudah terdapat untuk login ketika memasukan username dan password serta masih menggunakan tampilan dari laravel breeze sendiri. 
 <div align="center">
     <img src="public/images/2.png">
@@ -200,7 +203,9 @@ Namun ada beberapa yang kami edit agar bisa memberikan tampilan berdasarkan role
 <div align="center">
     <img src="public/images/3.png">
 </div>
+
 ### Detail Course 
+
 Di detail course akan menampilkan data course secara detail mulai dari harga deskripsi dan juga judul dalam 1 halaman untuk 1course dan ketika menekan tombol buy akan di arahkan untuk transaksi. 
 <div align="center">
     <img src="public/images/4.png">
@@ -209,7 +214,9 @@ Untuk controllernya kami mengambil data dari Table Course yang berelasi dengan t
 <div align="center">
     <img src="public/images/5.png">
 </div>
+
 ### Transaction 
+
 Transaction akan menampilkan data course yang ingin di beli dengan mengambil data berdasarkan id seperti detail course dan akan di beri tahu total yang harus di bayar oleh user.
 <div align="center">
     <img src="public/images/6.png">
@@ -218,7 +225,9 @@ Transaction controller melakukan validasi jika bukti pembayaran belum di upload 
 <div align="center">
     <img src="public/images/7.png">
 </div>
+
 ### Course History
+
 Halaman ini akan menampilkan course yang telah di beli oleh user berdasarkan relasi antar table yang di buat antara course, user dan juga transaksi.
 <div align="center">
     <img src="public/images/8.png">
@@ -227,7 +236,9 @@ MyCourse merupakan class untuk course history yang mengambil data dari Table Use
 <div align="center">
     <img src="public/images/9.png">
 </div>
+
 ### Dashboard Admin
+
 Halaman ini menampilkan data user dan berapakah course yang telah di beli oleh user.
 <div align="center">
     <img src="public/images/10.png">
@@ -239,7 +250,9 @@ Berikut Controller nya di ambil dari Table User dan juga Course.
 <div align="center">
     <img src="public/images/12.png">
 </div>
+
 ### Add Course Admin
+
 Halaman ini akan menampilkan form untuk menambah Course dan juga Add Schedules.
 <div align="center">
     <img src="public/images/13.png">
