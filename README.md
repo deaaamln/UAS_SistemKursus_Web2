@@ -16,11 +16,18 @@
 </ul>
 
 ## Sistem Kursus 
-<p>Lorem ipsum sir dolor amet.</p>
+Dashboard ini menampilkan kursus-kursus tren dan rekomendasi untuk pengguna. Bagian utama menyoroti kursus populer dengan detail singkat dan tombol pendaftaran, sementara bagian bawah menampilkan berbagai kategori kursus lain. Desainnya sederhana, memudahkan pengguna menemukan dan mendaftar kursus.
+### Beranda atau Dashboard
+<div align="center">
+    <img src="public/images/dashboard2.png">
+</div>
+
+<div align="center">
+    <img src="public/images/dashboard.png">
+</div>
 
 ## Penjelasan Proyek
 ### Apa itu Sistem Kursus Online?
-
 Sistem Kursus Online ini adalah platform yang dirancang untuk memudahkan Anda dalam mempelajari keterampilan baru secara online. Apakah Anda ingin belajar desain grafis dengan Adobe Illustrator dan Adobe Photoshop, mendesain antarmuka pengguna (UI Design), atau bahkan memulai perjalanan dalam pemrograman web dan mobile, platform ini menyediakan berbagai kursus yang sesuai dengan kebutuhan Anda.
 
 ### Fitur Utama Platform
@@ -141,13 +148,7 @@ Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.f
      - Pengembangan logika transaksi, termasuk proses pembelian kursus dan validasi pembayaran menggunakan PHP (Laravel).
      - Implementasi controller untuk mengelola transaksi.
 
-4. **Riwayat Kursus:**
-   - **Frontend:** 
-     - Desain antarmuka untuk menampilkan riwayat kursus yang telah diikuti oleh pengguna menggunakan HTML dan Tailwind CSS.
-   - **Backend:** 
-     - Pengembangan logika untuk menampilkan data riwayat kursus dari database menggunakan PHP (Laravel).
-     - Implementasi controller untuk mengelola riwayat kursus.
-
+4. 
 ### Gina - Frontend dan Backend:
 
 1. **Detail Kursus:**
@@ -158,12 +159,12 @@ Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.f
      - Pengembangan logika CRUD (Create, Read, Update, Delete) untuk mengelola data kursus menggunakan PHP (Laravel).
      - Implementasi controller untuk mengelola detail kursus.
 
-2. **Verifikasi Pembelian Kursus:**
+2. **Riwayat Kursus:**
    - **Frontend:** 
-     - Implementasi antarmuka yang memastikan pengguna sudah login sebelum membeli kursus menggunakan HTML dan Tailwind CSS.
+     - Desain antarmuka untuk menampilkan riwayat kursus yang telah diikuti oleh pengguna menggunakan HTML dan Tailwind CSS.
    - **Backend:** 
-     - Pengembangan logika untuk memverifikasi status login pengguna sebelum melakukan transaksi pembelian kursus menggunakan PHP (Laravel).
-     - Implementasi controller untuk memverifikasi pembelian kursus.
+     - Pengembangan logika untuk menampilkan data riwayat kursus dari database menggunakan PHP (Laravel).
+     - Implementasi controller untuk mengelola riwayat kursus.
 
 3. **Fitur Admin:**
    - **Frontend:** 
@@ -177,13 +178,8 @@ Tampilan antarmuka untuk proyek ini diambil dari [Community Figma](https://www.f
        - Menampilkan riwayat kursus untuk pengguna.
      - Implementasi controller untuk mengelola fitur-fitur admin.
 
-### Status Pengerjaan
-Saat ini, fitur-fitur berikut telah diselesaikan:
-1. **Pendaftaran Pengguna:** Otentikasi dan registrasi pengguna berhasil diimplementasikan.
-2. **Detail Kursus:** Pengguna dapat melihat detail kursus yang tersedia, termasuk deskripsi, jadwal, dan informasi instruktur.
-
 ## Demo Proyek
 <ul>
   <li>Github: <a href="">Github</a></li>
-  <li>Youtube: <a href="">Youtube</a></li>
+  <li>Youtube: <a href="https://youtu.be/kAoI5SIi1kU">Youtube</a></li>
 </ul>
